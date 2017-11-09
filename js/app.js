@@ -1,18 +1,6 @@
 window.onload = function (){
     var board = document.querySelector(".board-js");
-    /*como se investiga que funciona
-    debugger*/
-
-    /*board.addEventListener("click",function(event){
-        event.target.style.backgroundColor = "green";
-    } );
-    board.addEventListener("dblclick",function(event){
-        event.target.style.backgroundColor = "yellow";
-    } );
-    board.addEventListener("mouseover",function(event){
-        event.target.style.backgroundColor = "grey";
-    } );
-}*/
+   
     board.addEventListener("click",addX);
 };
     var centinel = true;
@@ -26,6 +14,11 @@ window.onload = function (){
             
             centinel = !centinel;
         }
-
     }
-
+    function reset(){
+        var td = document.getElementsByTagName('td');
+    
+        for(var i = 0; i < td.length; i++){
+            td[i].innerHTML = "";
+        }
+    }
